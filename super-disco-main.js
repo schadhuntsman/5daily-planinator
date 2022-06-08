@@ -57,11 +57,6 @@ function getInfo() {
 
 getInfo();
 
-
-
-
-
-
 // time element example
 // var nineAm = document.getElementById('.time-block');
 const nineAm = new Date('June 6, 2022 09:00:00');
@@ -71,18 +66,25 @@ const tenAm = new Date(`${today.toDateString()} 10:00:00`);
 console.log(today.toDateString());
 
 const eleven = new Date(`${today.toDateString()} 11:00:00`);
+console.log(today.toDateString());
 
 const twelve = new Date(`${today.toDateString()} 12:00:00`);
+console.log(today.toDateString());
 
 const one = new Date(`${today.toDateString()} 13:00:00`);
+console.log(today.toDateString());
 
 const two = new Date(`${today.toDateString()} 14:00:00`);
+console.log(today.toDateString());
 
 const three = new Date(`${today.toDateString()} 15:00:00`);
+console.log(today.toDateString());
 
 const four = new Date(`${today.toDateString()} 16:00:00`);
+console.log(today.toDateString());
 
 const five = new Date(`${today.toDateString()} 17:00:00`);
+console.log(today.toDateString());
 
 function timeColor() {
 if (nineAm > Date.now()) {
