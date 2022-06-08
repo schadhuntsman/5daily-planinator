@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -55,16 +55,16 @@ font-weight: 800;
   max-width: 850px;
   width: 100%;
   margin: 0 auto;
-}
+} */
 
-textarea{
+/* textarea{
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
-}
+} */
 
 .jumbotron {
   text-align: center;
@@ -81,6 +81,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  width: 80%;
 }
 
 .row {
@@ -89,10 +90,14 @@ textarea{
   border-top: 1px solid white;;
 }
 
-.hour {
+ #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9  {
   background-color: #ffffff;
-  color: #000000;
+  color: #348d11;
   border-top: 1px dashed #000000;
+  list-style-type: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
 }
 
 .past {
@@ -110,12 +115,13 @@ textarea{
   color: white;
 }
 
-.saveBtn {
+.code-rows #save-task1, #save-task2, #save-task3, #save-task4, #save-task5, #save-task6,#save-task7,#save-task8,#save-task9 {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  margin-bottom: 15px;
 }
 
 .saveBtn i:hover {

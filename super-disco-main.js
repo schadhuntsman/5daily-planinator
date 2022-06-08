@@ -15,8 +15,42 @@ window.addEventListener('load', () => {
     })
 })
 
+document.getElementById('save-task1').addEventListener("click", function() {
+    localStorage.setItem('9', document.getElementById('9').value)
+})
+document.getElementById('save-task2').addEventListener("click", function() {
+    localStorage.setItem('10', document.getElementById('10').value)
+})
+document.getElementById('save-task3').addEventListener("click", function() {
+    localStorage.setItem('11', document.getElementById('11').value)
+})
+document.getElementById('save-task4').addEventListener("click", function() {
+    localStorage.setItem('12', document.getElementById('12').value)
+})
+document.getElementById('save-task5').addEventListener("click", function() {
+    localStorage.setItem('13', document.getElementById('13').value)
+})
+document.getElementById('save-task6').addEventListener("click", function() {
+    localStorage.setItem('14', document.getElementById('14').value)
+})
+document.getElementById('save-task6').addEventListener("click", function() {
+    localStorage.setItem('15', document.getElementById('15').value)
+})
+document.getElementById('save-task6').addEventListener("click", function() {
+    localStorage.setItem('16', document.getElementById('16').value)
+})
+document.getElementById('save-task9').addEventListener("click", function() {
+    localStorage.setItem('17', document.getElementById('17').value)
+})
 
+function getInfo() {
+    for (let i = 9; i <= 17; i++) { 
+        let a = i.toString()  
+        document.getElementById(a).value = localStorage.getItem(a)     
+    }
+}
 
+getInfo();
 
 
 
