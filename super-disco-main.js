@@ -1,11 +1,11 @@
 window.addEventListener('load', () => {
-    const taskEnter = document.querySelector("#enter-task");
-    const taskSave = document.querySelector("#save-task");
-    const taskRows = document.querySelector("#row");
+    const timeBlock = document.querySelector(".time-block");
+    
+    const taskRows = document.querySelector(".code-rows");
     const containerDiv = document.querySelector(".container");
     
     containerDiv.addEventListener('submit', (e) => {
-        e.preventDefault();
+        
 
         const tasks = input.value;
 
@@ -50,6 +50,11 @@ function getInfo() {
     }
 }
 
+// for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+    
+// }
+
 getInfo();
 
 
@@ -57,21 +62,44 @@ getInfo();
 
 
 
-//time element example
-// var nineAm = document.getElementById('#row');
-// const nineAm = new Date('June 6, 2022 09:00:00');
-// const today = new Date();
+// time element example
+// var nineAm = document.getElementById('.time-block');
+const nineAm = new Date('June 6, 2022 09:00:00');
+const today = new Date();
 
-// const tenAm = new Date(`${today.toDateString()} 10:00:00`);
-// console.log(today.toDateString());
-// const eleven = new Date(`${today.toDateString()} 11:00:00`);
+const tenAm = new Date(`${today.toDateString()} 10:00:00`);
+console.log(today.toDateString());
 
-// if (nineAm > Date.now()) {
-//     nineAm.style.backgroundColor = 'red';
-// } else {
-//     nineAm.style.backgroundColor = 'green';
-// }
+const eleven = new Date(`${today.toDateString()} 11:00:00`);
 
+const twelve = new Date(`${today.toDateString()} 12:00:00`);
+
+const one = new Date(`${today.toDateString()} 13:00:00`);
+
+const two = new Date(`${today.toDateString()} 14:00:00`);
+
+const three = new Date(`${today.toDateString()} 15:00:00`);
+
+const four = new Date(`${today.toDateString()} 16:00:00`);
+
+const five = new Date(`${today.toDateString()} 17:00:00`);
+
+function timeColor() {
+if (nineAm > Date.now()) {
+    timeBlock.style.backgroundColor = 'red';
+} else {
+    timeBlock.style.backgroundColor = 'green';
+}console.log(timeColor);
+}
+
+// function timeColor(){
+//     el = document.getElementById(".time-block");
+//   if(el.style.color === 'crimson'){
+//     el.style.color = 'white';
+//   } else {
+//     el.style.color = 'crimson';
+//   }
+//  }
 
 // console.log(Date.now() < nineAm); 
 
