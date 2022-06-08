@@ -3,7 +3,10 @@ window.addEventListener('load', () => {
     
     const taskRows = document.querySelector(".code-rows");
     const containerDiv = document.querySelector(".container");
-    
+    // tasks();
+    timeColor();
+console.log(timeColor);
+
     containerDiv.addEventListener('submit', (e) => {
         
 
@@ -58,11 +61,12 @@ function getInfo() {
 getInfo();
 
 // time element example
-// var nineAm = document.getElementById('.time-block');
-const nineAm = new Date('June 6, 2022 09:00:00');
+// var nine = document.getElementById('.time-block');
+const nine = new Date('June 6, 2022 09:00:00');
 const today = new Date();
 
-const tenAm = new Date(`${today.toDateString()} 10:00:00`);
+const ten = new Date(`${today.toDateString()} 10:00:00`);
+
 console.log(today.toDateString());
 
 const eleven = new Date(`${today.toDateString()} 11:00:00`);
@@ -86,14 +90,26 @@ console.log(today.toDateString());
 const five = new Date(`${today.toDateString()} 17:00:00`);
 console.log(today.toDateString());
 
+const timeBlock = document.querySelector(".time-block");
+
 function timeColor() {
-if (nineAm > Date.now()) {
+    console.log('hello');
+if (nine || ten < Date.now()) {
     timeBlock.style.backgroundColor = 'red';
 } else {
     timeBlock.style.backgroundColor = 'green';
 }console.log(timeColor);
 }
+// eleven, twelve, one, two, three, four, five
 
+
+// ${today.toDateString()}
+
+// if (currentTime > timeBlock) {
+//     timeBlock.className = 'redclass'
+//     } else {
+//     timeslot.className = 'greenclass'
+//     }
 // function timeColor(){
 //     el = document.getElementById(".time-block");
 //   if(el.style.color === 'crimson'){
@@ -103,7 +119,7 @@ if (nineAm > Date.now()) {
 //   }
 //  }
 
-// console.log(Date.now() < nineAm); 
+// console.log(Date.now() < nine); 
 
 // const changeBox = function(){
 //     const box = document.querySelector
