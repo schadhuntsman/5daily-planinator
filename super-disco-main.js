@@ -1,23 +1,10 @@
 window.addEventListener('load', () => {
-    const timeBlock = document.getElementsByClassName("time-block");
-    
+    // const timeBlock = document.getElementsByClassName("time-block");
     const taskRows = document.querySelector(".code-rows");
     const containerDiv = document.querySelector(".container");
-    // tasks();
     console.log(timeBlock);
     
-    // timeBlockConversion();
-    // console.log(timeBlockConversion);
-    containerDiv.addEventListener('submit', (e) => {
-        
 
-        const tasks = input.value;
-
-        if (!tasks) {
-            alert("You must enter a task");
-        }
-    })
-})
 
 document.getElementById('save-task1').addEventListener("click", function() {
     localStorage.setItem('9', document.getElementById('9').value)
@@ -54,15 +41,8 @@ function getInfo() {
     }
 }
 
-// for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-    
-// }
-
 getInfo();
 
-// time element example
-// var nine = document.getElementById('.time-block');
 const today = new Date();
 
 const nine = new Date(`${today.toDateString()} 09:00:00`);
@@ -148,20 +128,4 @@ function assignColors(arr) {
     }
     
 }
-assignColors(timeBlock);
-
-
-         
-
-
-// function timeColor() {
-//     const arr = null;
-//     const timeBlock = document.querySelector(".time-block");
-//     // change input color based on current time
-//     timeBlock.forEach(function(time) {
-    
-// var timeBlockId = time.getAttribute("time-block");
-// console.log(timeBlockId);
-//     }
-//     )
-// }
+assignColors(timeBlock)
