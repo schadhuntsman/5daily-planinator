@@ -5,8 +5,7 @@ window.addEventListener('load', () => {
     const containerDiv = document.querySelector(".container");
     // tasks();
     console.log(timeBlock);
-timeColor();
-    console.log(timeColor);
+    
     // timeBlockConversion();
     // console.log(timeBlockConversion);
     containerDiv.addEventListener('submit', (e) => {
@@ -64,8 +63,10 @@ getInfo();
 
 // time element example
 // var nine = document.getElementById('.time-block');
-const nine = new Date('June 6, 2022 09:00:00');
 const today = new Date();
+
+const nine = new Date(`${today.toDateString()} 09:00:00`);
+
 
 const ten = new Date(`${today.toDateString()} 10:00:00`);
 console.log('ten is here', ten.getHours());
@@ -92,24 +93,62 @@ console.log(today.toDateString());
 const five = new Date(`${today.toDateString()} 17:00:00`);
 console.log(today.toDateString());
 
-const timeBlock = document.querySelector(".time-block");
+const timeBlock = document.getElementsByClassName("time-block");
 
 
-function timeColor(taskHour) {
+function timeColor(taskHour, el) {
     console.log('hello');
 if (taskHour.getHours() < Date.now()) {
-    timeBlock.style.backgroundColor = 'crimson';
-} else {
-    timeBlock.style.backgroundColor = 'green';
-}
-}
-function assignColors(arr) {
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i].id)
+    el.style.backgroundColor = 'crimson';
+} else if (taskHour.getHours() === new Date().getHours()) {
+    el.style.backgroundColor = 'green';
+} else {el.style.backgroundColor = 'gray'
 
+}   
+};
+
+function assignColors(arr) {
+    console.log(arr);
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i].id === '9') {
+            timeColor(nine, arr[i])
+
+        }
+        if (arr[i].id === '10') {
+            timeColor(ten, arr[i])
+
+        }
+        if (arr[i].id === '11') {
+            timeColor(eleven, arr[i])
+
+        }        if (arr[i].id === '12') {
+            timeColor(twelve, arr[i])
+
+        }
+        if (arr[i].id === '13') {
+            timeColor(one, arr[i])
+
+        }
+        if (arr[i].id === '14') {
+            timeColor(two, arr[i])
+
+        }        if (arr[i].id === '15') {
+            timeColor(three, arr[i])
+
+        }
+        if (arr[i].id === '16') {
+            timeColor(four, arr[i])
+
+        }
+        if (arr[i].id === '17') {
+            timeColor(five, arr[i])
+
+        }
         //do if for every time 
     }
+    
 }
+assignColors(timeBlock);
 
 
          
