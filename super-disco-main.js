@@ -4,9 +4,11 @@ window.addEventListener('load', () => {
     const taskRows = document.querySelector(".code-rows");
     const containerDiv = document.querySelector(".container");
     // tasks();
-    timeColor();
-console.log(timeColor);
-
+    
+timeColor();
+    console.log(timeColor);
+    timeBlockConversion();
+    console.log(timeBlockConversion);
     containerDiv.addEventListener('submit', (e) => {
         
 
@@ -90,17 +92,38 @@ console.log(today.toDateString());
 const five = new Date(`${today.toDateString()} 17:00:00`);
 console.log(today.toDateString());
 
-const timeBlock = document.querySelector(".time-block");
+// const timeBlock = document.querySelector(".time-block");
 
 function timeColor() {
-    console.log('hello');
-if (nine || ten < Date.now()) {
-    timeBlock.style.backgroundColor = 'red';
-} else {
-    timeBlock.style.backgroundColor = 'green';
-}console.log(timeColor);
+    const arr = null;
+    const timeBlock = document.querySelector(".time-block");
+    // change input color based on current time
+    timeBlock.forEach(function(time) {
+    
+var timeBlockId = time.getAttribute("time-block");
+console.log(timeBlockId);
+    }
+    )
 }
-// eleven, twelve, one, two, three, four, five
+
+
+// function timeColor() {
+//     console.log('hello');
+// if (ten < Date.now()) {
+//     timeBlock.style.backgroundColor = 'crimson';
+// } else {
+//     timeBlock.style.backgroundColor = 'green';
+// }console.log(timeColor);
+// }
+
+function timeBlockConversion() {
+$('.time-block').each(function() {
+    var ten = parseInt()
+      $(this)
+        .attr('id')
+    })
+}
+ 
 
 
 // ${today.toDateString()}
@@ -119,8 +142,3 @@ if (nine || ten < Date.now()) {
 //   }
 //  }
 
-// console.log(Date.now() < nine); 
-
-// const changeBox = function(){
-//     const box = document.querySelector
-// }
