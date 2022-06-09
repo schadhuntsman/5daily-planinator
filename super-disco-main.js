@@ -7,8 +7,8 @@ window.addEventListener('load', () => {
     
 timeColor();
     console.log(timeColor);
-    timeBlockConversion();
-    console.log(timeBlockConversion);
+    // timeBlockConversion();
+    // console.log(timeBlockConversion);
     containerDiv.addEventListener('submit', (e) => {
         
 
@@ -92,53 +92,29 @@ console.log(today.toDateString());
 const five = new Date(`${today.toDateString()} 17:00:00`);
 console.log(today.toDateString());
 
-// const timeBlock = document.querySelector(".time-block");
-
-function timeColor() {
-    const arr = null;
-    const timeBlock = document.querySelector(".time-block");
-    // change input color based on current time
-    timeBlock.forEach(function(time) {
-    
-var timeBlockId = time.getAttribute("time-block");
-console.log(timeBlockId);
-    }
-    )
-}
-
+const timeBlock = document.querySelector(".time-block");
 
 // function timeColor() {
-//     console.log('hello');
-// if (ten < Date.now()) {
-//     timeBlock.style.backgroundColor = 'crimson';
-// } else {
-//     timeBlock.style.backgroundColor = 'green';
-// }console.log(timeColor);
+//     const arr = null;
+//     const timeBlock = document.querySelector(".time-block");
+//     // change input color based on current time
+//     timeBlock.forEach(function(time) {
+    
+// var timeBlockId = time.getAttribute("time-block");
+// console.log(timeBlockId);
+//     }
+//     )
 // }
 
-function timeBlockConversion() {
-$('.time-block').each(function() {
-    var ten = parseInt()
-      $(this)
-        .attr('id')
-    })
+
+function timeColor() {
+    console.log('hello');
+if (nine < Date.now()) {
+    timeBlock.style.backgroundColor = 'crimson';
+} else {
+    timeBlock.style.backgroundColor = 'green';
+}console.log(timeColor);
 }
- 
 
 
-// ${today.toDateString()}
-
-// if (currentTime > timeBlock) {
-//     timeBlock.className = 'redclass'
-//     } else {
-//     timeslot.className = 'greenclass'
-//     }
-// function timeColor(){
-//     el = document.getElementById(".time-block");
-//   if(el.style.color === 'crimson'){
-//     el.style.color = 'white';
-//   } else {
-//     el.style.color = 'crimson';
-//   }
-//  }
 
