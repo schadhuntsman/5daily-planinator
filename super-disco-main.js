@@ -1,6 +1,17 @@
 window.addEventListener('load', () => {
-    const timeBlock = document.querySelector(".time-block");
+    const timeBlock = document.querySelectorAll(".time-block");   
     
+    
+        for (let i = 9; i <= 18; i++) { 
+            let a = i.toString()  
+            let block = document.getElementById(a)
+            block.classList.add('past')
+            block.classList.add('present')
+            block.classList.add('future')
+            // document.getElementById(a).value = localStorage.getItem(a)     
+        }
+    
+
     const taskRows = document.querySelector(".code-rows");
     const containerDiv = document.querySelector(".container");
     
@@ -43,12 +54,7 @@ document.getElementById('save-task9').addEventListener("click", function() {
     localStorage.setItem('17', document.getElementById('17').value)
 })
 
-function getInfo() {
-    for (let i = 9; i <= 17; i++) { 
-        let a = i.toString()  
-        document.getElementById(a).value = localStorage.getItem(a)     
-    }
-}
+
 
 // for (let index = 0; index < array.length; index++) {
 //     const element = array[index];
@@ -94,6 +100,12 @@ if (nineAm > Date.now()) {
 }console.log(timeColor);
 }
 
+// function getInfo() {
+//     for (let i = 9; i <= 17; i++) { 
+//         let a = i.toString()  
+//         document.getElementById(a).value = localStorage.getItem(a)     
+//     }
+// }
 // function timeColor(){
 //     el = document.getElementById(".time-block");
 //   if(el.style.color === 'crimson'){
