@@ -1,16 +1,45 @@
+
+const date = new Date(); 
+const current_time = date.getHours();
+console.log(current_time)
+const timeBlock = document.querySelectorAll(".time-block");  
+
 window.addEventListener('load', () => {
     const timeBlock = document.querySelectorAll(".time-block");   
 
-        
-    
-        for (let i = 9; i <= 18; i++) { 
-            let a = i.toString()  
-            let block = document.getElementById(a)
-            block.classList.add('past')
-            block.classList.add('present')
-            block.classList.add('future')
+    for (let i = 9; i <= 18; i++) { 
+        let a = i.toString()  
+        let block = document.getElementById(a)
+        let twelve = "#12"
+            if (twelve < current_time) {
+                timeBlock.body.style.backgroundColor = "grey"
+            } else if (twelve > current_time) {
+                timeBlock.body.style.backgroundColor = "green"
+            } else if (twelve === current_time) {
+                timeBlock.body.style.backgroundColor = "red"
+            }
+            // if(tenAm = current_time) {
+            //     block.classList.add('present')
+            // }   else if 
+            //     (tenAM < current_time) 
+            //         block.classList.add('past')
+            //      else if  
+            //         (tenAm == current_time)
+            //         block.classList.add('present')
+                }
+            })
+                    // if (nineAm > current_time) {
+//     timeBlock.style.backgroundColor = 'red';
+// } else {
+//     timeBlock.style.backgroundColor = 'green';
+// }console.log(timeColor); 
+
+            // block.classList.add('past')
+            // block.classList.add('present')
+            // block.classList.add('future')
             // document.getElementById(a).value = localStorage.getItem(a)     
-        }
+        
+        
     
 
     const taskRows = document.querySelector(".code-rows");
@@ -25,7 +54,8 @@ window.addEventListener('load', () => {
             alert("You must enter a task");
         }
     })
-})
+
+
 
 document.getElementById('save-task1').addEventListener("click", function() {
     localStorage.setItem('9', document.getElementById('9').value)
@@ -62,7 +92,7 @@ document.getElementById('save-task9').addEventListener("click", function() {
     
 // }
 
-getInfo();
+// getInfo();
 
 // time element example
 // var nineAm = document.getElementById('.time-block');
@@ -93,13 +123,42 @@ console.log(today.toDateString());
 const five = new Date(`${today.toDateString()} 17:00:00`);
 console.log(today.toDateString());
 
-function timeColor() {
-if (nineAm > Date.now()) {
-    timeBlock.style.backgroundColor = 'red';
-} else {
-    timeBlock.style.backgroundColor = 'green';
-}console.log(timeColor);
-}
+
+// function timeColor() {
+//     const timeBlock = document.querySelectorAll(".time-block");  
+// if (nineAm > current_time) {
+//     timeBlock.style.backgroundColor = 'red';
+// } else {
+//     timeBlock.style.backgroundColor = 'green';
+// }console.log(timeColor); 
+// }
+// if (tenAm > current_time) {
+//     timeBlock.style.backgroundColor = 'red';
+// } else {
+//     timeBlock.style.backgroundColor = 'green';
+// }console.log(timeColor);
+// if (eleven > current_time) {
+//     timeBlock.style.backgroundColor = 'red';
+// } else {
+//     timeBlock.style.backgroundColor = 'green';
+// }console.log(timeColor);
+
+// timeColor();
+
+// .past {
+//     background-color: #d3d3d3;
+//     color:  rgb(50, 50, 50);
+//   }
+  
+//   .present {
+//     background-color: #ff6961;
+//     color: rgb(50, 50, 50);
+//   } 
+  
+  
+//   .future {
+//     background-color: #77dd77;
+//     color: rgb(50, 50, 50);
 
 // function getInfo() {
 //     for (let i = 9; i <= 17; i++) { 
