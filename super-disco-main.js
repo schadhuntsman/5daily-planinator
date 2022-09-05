@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
     const timeBlock = document.querySelectorAll(".time-block");   
-    
+
+        
     
         for (let i = 9; i <= 18; i++) { 
             let a = i.toString()  
