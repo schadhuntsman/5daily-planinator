@@ -1,33 +1,31 @@
-
 const date = new Date(); 
 const current_time = date.getHours();
 console.log(current_time)
-const timeBlock = document.querySelectorAll(".time-block");  
+  
 
 window.addEventListener('load', () => {
-    const timeBlock = document.querySelectorAll(".time-block");   
+    const textArea = document.querySelectorAll(".time-block");   
+    
+    const timeBlock = textArea[0]
 
-    for (let i = 9; i <= 18; i++) { 
-        let a = i.toString()  
-        let block = document.getElementById(a)
-        let twelve = document.getElementById('#12')
-            if (twelve < current_time) {
-                timeBlock.body.style.backgroundColor = "grey"
-            } else if (twelve > current_time) {
-                timeBlock.body.style.backgroundColor = "green"
-            } else if (twelve === current_time) {
-                timeBlock.body.style.backgroundColor = "red"
-            }
-            // if(tenAm = current_time) {
-            //     block.classList.add('present')
-            // }   else if 
-            //     (tenAM < current_time) 
-            //         block.classList.add('past')
-            //      else if  
-            //         (tenAm == current_time)
-            //         block.classList.add('present')
-                }
-            })
+    for (let i = 0; i < textArea.length; i++) { 
+        let hourEl = textArea[i]
+        console.log(hourEl);
+        const hourString = hourEl.getAttribute("id")
+        console.log(hourString, "what's this?");
+        const hour = parseInt(hourString)
+        if(hour > current_time) {
+        let timeBlock = document.getElementsByClassName(".time-block");
+        timeBlock[i].classList.add("future")
+        }
+        
+        
+                
+    
+    
+    }
+            
+})
                     // if (nineAm > current_time) {
 //     timeBlock.style.backgroundColor = 'red';
 // } else {
@@ -75,10 +73,10 @@ document.getElementById('save-task5').addEventListener("click", function() {
 document.getElementById('save-task6').addEventListener("click", function() {
     localStorage.setItem('14', document.getElementById('14').value)
 })
-document.getElementById('save-task6').addEventListener("click", function() {
+document.getElementById('save-task7').addEventListener("click", function() {
     localStorage.setItem('15', document.getElementById('15').value)
 })
-document.getElementById('save-task6').addEventListener("click", function() {
+document.getElementById('save-task8').addEventListener("click", function() {
     localStorage.setItem('16', document.getElementById('16').value)
 })
 document.getElementById('save-task9').addEventListener("click", function() {
@@ -96,10 +94,10 @@ document.getElementById('save-task9').addEventListener("click", function() {
 
 // time element example
 // var nineAm = document.getElementById('.time-block');
-const nineAm = new Date('June 6, 2022 09:00:00');
+const nine = new Date('June 6, 2022 09:00:00');
 const today = new Date();
 
-const tenAm = new Date(`${today.toDateString()} 10:00:00`);
+const ten = new Date(`${today.toDateString()} 10:00:00`);
 console.log(today.toDateString());
 
 const eleven = new Date(`${today.toDateString()} 11:00:00`);

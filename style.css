@@ -26,7 +26,7 @@
   border-top: 1px solid white;;
 }
 
- #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9  {
+ .hour-style {
   background-color: #ffffff;
   color: #348d11;
   border-top: 1px dashed #000000;
