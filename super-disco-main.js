@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
     for (let i = 9; i <= 18; i++) { 
         let a = i.toString()  
         let block = document.getElementById(a)
-        let twelve = "#12"
+        let twelve = document.getElementById('#12')
             if (twelve < current_time) {
                 timeBlock.body.style.backgroundColor = "grey"
             } else if (twelve > current_time) {
