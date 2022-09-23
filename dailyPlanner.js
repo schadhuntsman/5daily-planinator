@@ -15,17 +15,24 @@ window.addEventListener('load', () => {
         console.log(hourString, "what's this?");
         const hour = parseInt(hourString)
         if(hour > current_time) {
-        let timeBlock = document.getElementsByClassName(".time-block");
-        timeBlock[i].classList.add("future")
-        }
-        
-        
-                
-    
-    
-    }
-            
+            $(hourEl).addClass("future")
+        } else if (hour < current_time) {
+            $(hourEl).addClass("past")
+        } else {
+            // (hour = current_time)
+            $(hourEl).addClass("present")
+        }     
+    }  
 })
+
+        
+// if (hourEl.isAfter(current_time)) {
+//     $(hourEl).addClass("past");
+// } else if (hour < current_time) {
+//     $(hourEl).classList.add("future")
+// } else {
+//     $(hourEl).classList.add("present")
+// }
                     // if (nineAm > current_time) {
 //     timeBlock.style.backgroundColor = 'red';
 // } else {
@@ -36,8 +43,7 @@ window.addEventListener('load', () => {
             // block.classList.add('present')
             // block.classList.add('future')
             // document.getElementById(a).value = localStorage.getItem(a)     
-        
-        
+
     
 
     const taskRows = document.querySelector(".code-rows");
